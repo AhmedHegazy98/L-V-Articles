@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="css/login.css" rel="stylesheet" />
+
+</head>
+<body>
+    <video class="video-bg" autoplay muted loop>
+        <source src="/login/image/login.mp4" type="video/mp4" />
+        <source src="/login/image/login.webm" type="video/webm" />
+    </video>
+    <div class="div2 absolute">
+        <div class="form-modal">
+
+            <div class="form-toggle">
+                <button id="login-toggle" onclick="toggleLogin()">log in</button>
+                <button id="signup-toggle" onclick="toggleSignup()">sign up</button>
+            </div>
+
+            <div id="login-form">
+                <form>
+                    <input type="text" placeholder="Enter email or username" />
+                    <input type="password" placeholder="Enter password" />
+                    <button type="button" class="btn login">login</button>
+                    <button type="button" onclick="location.href = 'index.html';" class="btn -box-sd-effect"> <i class="fas fa-home fa-lg" aria-hidden="true"></i>Back to home</button>
+                </form>
+            </div>
+
+            <div id="signup-form">
+                <form>
+                   
+                    <input type="text" placeholder="Choose username" />
+                    <input type="email" placeholder="Enter your email" />
+                    <input type="password" placeholder="Create password" />
+                    <input type="password" placeholder="Confirm password" />
+                    <input type="text" placeholder="Phone" />
+                    <input type="text" placeholder="Country" />
+                    <button type="button" class="btn signup">create account</button>
+                    <hr />
+                    <button type="button" class="btn -box-sd-effect google"> <i class="fab fa-google fa-lg" aria-hidden="true"></i> sign up with google</button>
+                    <button type="button" class="btn -box-sd-effect facebook"> <i class="fab fa-facebook fa-lg" aria-hidden="true"></i> sign in with Facebook</button>
+                    <button type="button" onclick="location.href = 'index.html';" class="btn -box-sd-effect"> <i class="fas fa-home fa-lg" aria-hidden="true"></i>Back to home</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleSignup() {
+            document.getElementById("login-toggle").style.backgroundColor = "#fff";
+            document.getElementById("login-toggle").style.color = "#222";
+            document.getElementById("signup-toggle").style.backgroundColor = "#4879ba";
+            document.getElementById("signup-toggle").style.color = "#fff";
+            document.getElementById("login-form").style.display = "none";
+            document.getElementById("signup-form").style.display = "block";
+        }
+
+        function toggleLogin() {
+            document.getElementById("login-toggle").style.backgroundColor = "#4879ba";
+            document.getElementById("login-toggle").style.color = "#fff";
+            document.getElementById("signup-toggle").style.backgroundColor = "#fff";
+            document.getElementById("signup-toggle").style.color = "#222";
+            document.getElementById("signup-form").style.display = "none";
+            document.getElementById("login-form").style.display = "block";
+        }
+
+    </script>
+
+</body>
+</html>
